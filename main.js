@@ -38,6 +38,40 @@ function sumaArray3(numeros) {
     return suma
 }
 
-function BuscarAlumno(){
-    
+/**
+ * @description BuscarAlumno busca un objeto de tipo alumno dentro de una coleccion de objetos, devuelve true si lo encuentra y false si no lo hace
+ * @param {Array} listaAlumnos Es una coleccion de objetos (alumnos)
+ * @param {Alumno} alumno El alumno que queremos comprobar si está o no
+ * @return {Boolean} Devuelve true si lo encuentra, y false si no lo hace
+ */
+function BuscarAlumno(listaAlumnos, alumno) {
+    let encontrado = false
+    for (let al of listaAlumnos) {
+        if (al.nombre == alumno.nombre &&
+            al.apellidos && alumno.apellidos) {
+            encontrado = true
+        }
+    }
+    return encontrado
 }
+
+let alumnos = [
+    {
+        nombre: "Pe",
+        apellidos: "Rb"
+    },
+    {
+        nombre: "Le",
+        apellidos: "La"
+    },
+    {
+        nombre: "Lo",
+        apellidos: "La"
+    }
+];
+
+let alumno = {
+    nombre: "dzd",
+    apellidos: "fhbhxg"
+}
+console.log(BuscarAlumno(alumnos,alumno));
