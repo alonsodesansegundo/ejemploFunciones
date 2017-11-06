@@ -37,3 +37,7 @@ function sumaArray3(numeros) {
     }
     return suma
 }
+
+function BuscarAlumno(){
+    
+}
