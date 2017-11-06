@@ -11,8 +11,29 @@
  * @return {Number} La suma de los numeros de la coleccion
  */
 
- function sumaArray(numeros){
-     let suma=0;
-    
-     return suma;
- }
+function sumaArray(numeros) {
+    let suma = 0;
+    for (let numero of numeros) {
+        suma = suma + numero
+    }
+    return suma;
+}
+
+let sumaValor = sumaArray3([2, 3]);
+console.log(sumaValor)
+
+function sumaArray2(numeros) {
+    let suma = 0
+    for (let pos in numeros) {
+        suma = suma + numeros[pos]
+    }
+    return suma
+}
+
+function sumaArray3(numeros) {
+    let suma = 0
+    for (let i = 0; i < numeros.length; i++) {
+        suma = suma + numeros[i]
+    }
+    return suma
+}
